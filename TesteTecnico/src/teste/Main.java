@@ -138,7 +138,19 @@ public class Main {
         else{
             tipo = "Tampa Eat In - Comer no restaurante";
         }
+        System.out.println("+-------------------------------+");
+        System.out.println("DETALHES DO PEDIDO");
         System.out.println(bebida + " - " + tamanho + gelo + " | " + copo);
         System.out.println(tipo);
+        System.out.println("+-------------------------------+");
+        
+        do{
+            System.out.println("Confirmar Pedido?");
+            System.out.println("1 - SIM");
+            System.out.println("0 - NÃO");
+            
+            opcao = Console.readInt();
+        }while(opcao !=1);
+        System.out.println("Pedido sendo preparado!");
     }
 }
