@@ -10,7 +10,8 @@ package teste;
  * @author davym
  */
 public class Interface extends javax.swing.JFrame {
-
+    //variaveis
+    String bebida, copo, gelo, tipo, tamanho, resultado;
     /**
      * Creates new form Interface
      */
@@ -28,8 +29,11 @@ public class Interface extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jResultado = new javax.swing.JLabel();
+        jLresultado = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jRBcoca = new javax.swing.JRadioButton();
         jRBguarana = new javax.swing.JRadioButton();
@@ -41,18 +45,19 @@ public class Interface extends javax.swing.JFrame {
         jRBp = new javax.swing.JRadioButton();
         jRBm = new javax.swing.JRadioButton();
         jRBg = new javax.swing.JRadioButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jRBs = new javax.swing.JRadioButton();
+        jRBn = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        jRBd = new javax.swing.JRadioButton();
+        jRBc = new javax.swing.JRadioButton();
         jBok = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Faça seu pedido de bebidas"));
 
-        jResultado.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalhes do pedido"));
+        jLresultado.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalhes do pedido"));
 
         jLabel1.setText("Bem vindo!");
 
@@ -79,6 +84,7 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel4.setText("Gelo:");
 
+        buttonGroup2.add(jRBp);
         jRBp.setText("PEQUENO(300ml)");
         jRBp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,8 +92,10 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup2.add(jRBm);
         jRBm.setText("MEDIO(500ml)");
 
+        buttonGroup2.add(jRBg);
         jRBg.setText("GRANDE(700ml)");
         jRBg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,25 +103,36 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton1.setText("SIM");
+        buttonGroup3.add(jRBs);
+        jRBs.setText("SIM");
 
-        jRadioButton2.setText("NÃO");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup3.add(jRBn);
+        jRBn.setText("NÃO");
+        jRBn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                jRBnActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("Consumo");
+        jLabel5.setText("Consumo:");
 
-        jRadioButton3.setText("DELIVERY");
+        buttonGroup4.add(jRBd);
+        jRBd.setText("DELIVERY");
 
-        jRadioButton4.setText("COMER NO RESTAURANTE");
+        buttonGroup4.add(jRBc);
+        jRBc.setText("COMER NO RESTAURANTE");
 
         jBok.setText("CONFIRMAR");
         jBok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBokActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("LIMPAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -137,7 +156,7 @@ public class Interface extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLresultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -151,12 +170,12 @@ public class Interface extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel4)
-                                            .addComponent(jRadioButton1)
-                                            .addComponent(jRadioButton2))
+                                            .addComponent(jRBs)
+                                            .addComponent(jRBn))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton3)
-                                            .addComponent(jRadioButton4)
+                                            .addComponent(jRBd)
+                                            .addComponent(jRBc)
                                             .addComponent(jLabel5)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jRBuva)
@@ -168,8 +187,10 @@ public class Interface extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(162, 162, 162)
+                .addGap(69, 69, 69)
                 .addComponent(jBok, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -192,8 +213,8 @@ public class Interface extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRBp)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton3))
+                    .addComponent(jRBs)
+                    .addComponent(jRBd))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -203,12 +224,14 @@ public class Interface extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton4))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(jBok)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRBn)
+                            .addComponent(jRBc))))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBok)
+                    .addComponent(jButton1))
+                .addGap(18, 18, 18)
+                .addComponent(jLresultado, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -238,13 +261,85 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRBgActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void jRBnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_jRBnActionPerformed
 
     private void jBokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBokActionPerformed
-        // TODO add your handling code here:
+        jLresultado.setText(String.valueOf(jLresultado));
+        if(jRBcoca.isSelected()){
+            bebida = "COCA-COLA";
+            copo = "Copo de papel";
+            if(jRBp.isSelected()){
+                tamanho = "PEQUENO(300ML)";
+            }
+            else if(jRBm.isSelected()){
+                tamanho = "MÉDIO(500ML)";
+            }
+            else if(jRBg.isSelected()){
+                tamanho = "GRANDE(700ML)";
+            }
+        }
+        else if(jRBguarana.isSelected()){
+            bebida = "GUARANÁ";
+            copo = "Copo de papel";
+            if(jRBp.isSelected()){
+                tamanho = "PEQUENO(300ML)";
+            }
+            else if(jRBm.isSelected()){
+                tamanho = "MÉDIO(500ML)";
+            }
+            else if(jRBg.isSelected()){
+                tamanho = "GRANDE(700ML)";
+            }
+        }
+        else if(jRBuva.isSelected()){
+            bebida = "SUCO DE UVA";
+            copo = "Copo de plastico";
+            if(jRBp.isSelected()){
+                tamanho = "PEQUENO(300ML)";
+            }
+            else if(jRBm.isSelected()){
+                tamanho = "GRANDE(500ML)";
+            }
+        }
+        else if(jRBlaranja.isSelected()){
+            bebida = "SUCO DE LARANJA";
+            copo = "Copo de plastico";
+            if(jRBp.isSelected()){
+                tamanho = "PEQUENO(300ML)";
+            }
+            else if(jRBm.isSelected()){
+                tamanho = "GRANDE(500ML)";
+            }
+        }
+        bebida = bebida;
+        copo = copo;
+        tamanho = tamanho;
+        if(jRBs.isSelected()){
+            gelo = "com gelo";
+        }
+        else if(jRBn.isSelected()){
+            gelo = "sem gelo";
+        }
+        gelo = gelo;
+        if(jRBd.isSelected()){
+            tipo = "Tampa Take Out - Delivery";
+        }
+        else if(jRBc.isSelected()){
+            tipo = "Tampa Eat In - Comer no restaurante";
+        }
+        tipo = tipo;
+        jLresultado.setText(bebida + " - " + tamanho + " " +gelo + " | " + copo + " # " + tipo);
     }//GEN-LAST:event_jBokActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jLresultado.setText("");
+        buttonGroup1.clearSelection();
+        buttonGroup2.clearSelection();
+        buttonGroup3.clearSelection();
+        buttonGroup4.clearSelection();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,24 +378,28 @@ public class Interface extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JButton jBok;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLresultado;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRBc;
     private javax.swing.JRadioButton jRBcoca;
+    private javax.swing.JRadioButton jRBd;
     private javax.swing.JRadioButton jRBg;
     private javax.swing.JRadioButton jRBguarana;
     private javax.swing.JRadioButton jRBlaranja;
     private javax.swing.JRadioButton jRBm;
+    private javax.swing.JRadioButton jRBn;
     private javax.swing.JRadioButton jRBp;
+    private javax.swing.JRadioButton jRBs;
     private javax.swing.JRadioButton jRBuva;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JLabel jResultado;
     // End of variables declaration//GEN-END:variables
 }
