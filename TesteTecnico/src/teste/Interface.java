@@ -5,6 +5,8 @@
  */
 package teste;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davym
@@ -274,7 +276,7 @@ public class Interface extends javax.swing.JFrame {
 
     private void jBokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBokActionPerformed
         jLresultado.setText(String.valueOf(jLresultado));
-        if(jRBcoca.isSelected()){
+        if(jRBcoca.isSelected(  )){
             bebida = "COCA-COLA";
             copo = "Copo de papel";
             if(jRBp.isSelected()){
@@ -337,7 +339,9 @@ public class Interface extends javax.swing.JFrame {
             tipo = "Tampa Eat In - Comer no restaurante";
         }
         tipo = tipo;
+        resultado = bebida + " - " + tamanho + " " +gelo + " | " + copo + " # " + tipo;
         jLresultado.setText(bebida + " - " + tamanho + " " +gelo + " | " + copo + " # " + tipo);
+        JOptionPane.showMessageDialog(null, resultado);
     }//GEN-LAST:event_jBokActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
