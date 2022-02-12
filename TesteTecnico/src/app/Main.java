@@ -139,11 +139,11 @@ public class Main {
             else{
                 tipo = "Tampa Eat In - Comer no restaurante";
             }
-            System.out.println("+-------------------------------+");
+            System.out.println("+--------------------------------------------------+");
             System.out.println("DETALHES DO PEDIDO");
             System.out.println(bebida + " - " + tamanho + gelo + " | " + copo);
             System.out.println(tipo);
-            System.out.println("+-------------------------------+");
+            System.out.println("+--------------------------------------------------+");
 
 
             System.out.println("Confirmar Pedido?");
@@ -151,12 +151,11 @@ public class Main {
             System.out.println("0 - NÃO");
 
             opcao = Console.readInt();
-        }while(opcao !=1 && opcao != 0);
-        if(opcao == 1){
-            System.out.println("Pedido sendo preparado!");
-        }
-        else{
-            System.out.println("Pedido Cancelado!");
-        }
+            if(opcao != 1){
+                System.out.println("+-------------------------------+");
+                System.out.println("Cancelado! Faça outro pedido");
+            }
+        }while(opcao !=1);
+        System.out.println("Pedido sendo preparado!");
     }
 }
