@@ -57,7 +57,7 @@ public class Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Faça seu pedido de bebidas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 18), new java.awt.Color(204, 0, 0))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FaÃ§a seu pedido de bebidas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 18), new java.awt.Color(204, 0, 0))); // NOI18N
 
         jLresultado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalhes do pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
 
@@ -68,7 +68,7 @@ public class Interface extends javax.swing.JFrame {
         jRBcoca.setText("COCA-COLA");
 
         buttonGroup1.add(jRBguarana);
-        jRBguarana.setText("GUARANÁ");
+        jRBguarana.setText("GUARANÃ�");
 
         buttonGroup1.add(jRBuva);
         jRBuva.setText("SUCO DE UVA");
@@ -113,7 +113,7 @@ public class Interface extends javax.swing.JFrame {
         jRBs.setText("SIM");
 
         buttonGroup3.add(jRBn);
-        jRBn.setText("NÃO");
+        jRBn.setText("NÃƒO");
         jRBn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRBnActionPerformed(evt);
@@ -296,7 +296,7 @@ public class Interface extends javax.swing.JFrame {
                 tamanho = "PEQUENO(300ML)";
             }
             else if(jRBm.isSelected()){
-                tamanho = "MÉDIO(500ML)";
+                tamanho = "MÃ‰DIO(500ML)";
             }
             else if(jRBg.isSelected()){
                 tamanho = "GRANDE(700ML)";
