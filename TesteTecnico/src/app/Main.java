@@ -30,6 +30,18 @@ public class Main {
         return copo;
         
     }
+    public String tipoTampa(String consumo){
+        this.tipo = tipo;
+
+        if(consumo == "Delivery"){
+             tipo = "Tampa Take Out";
+        }
+        else{
+            tipo = "Tampa Eat In";
+        }
+
+        return bebida;
+    }
     public void view()throws IOException{
         do{
             do{
