@@ -9,14 +9,28 @@ import java.io.IOException;
  * @author davym
  */
 public class Main {
-
+    public int opcao = 0;
+    public String bebida, copo, gelo, tipo;
+    public String tamanho = null;
+    
     public static void main(String[] args) throws IOException {
-        // variaveis e inicializaÃ§Ã£o
-        int opcao = 0;
-        String bebida, copo, gelo, tipo;
-        String tamanho = null;
+        Main main = new Main();
+        main.view();
+    }
+    public String tipoCopo(String bebida){
+        this.bebida = bebida;
+        this.copo = copo;
         
-        // BEBIDAS
+         if(bebida == "SUCO DE UVA" || bebida == "SUCO DE LARANJA"){ 
+             copo = "Copo de plástico";
+         }
+        else{
+            copo = "Copo de papel";
+        }
+        return copo;
+        
+    }
+    public void view()throws IOException{
         do{
             do{
                 System.out.println("\nSEJA BEM VINDO");
@@ -38,7 +52,7 @@ public class Main {
                     System.out.println("Opção Inválida");
                 }
             }while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4);
-            // AtribuiÃ§Ã£o bebidas
+            
             if(opcao == 1){
                 bebida = "COCA-COLA";
             }
@@ -51,14 +65,14 @@ public class Main {
             else{
                 bebida = "SUCO DE LARANJA";
             }
-            // AtribuiÃ§Ã£o copo
+            // Atribuição copo
             if(opcao == 1 || opcao == 2){
                 copo = "Copo de papel";
             }
             else{
                 copo = "Copo de plástico";
             }
-            // TAMANHO
+            
             if(opcao == 1 || opcao == 2){
                 do{
                     System.out.println("+-------------------------------+");
@@ -103,11 +117,11 @@ public class Main {
                 }while(opcao != 1 && opcao != 2); 
             }
             tamanho = tamanho;
-            // GELO
+            
             do{
                 System.out.println("Deseja Gelo? ");
                 System.out.println("Para SIM - Digite 1");
-                System.out.println("Para NÃƒO - Digite 0");
+                System.out.println("Para NÃO - Digite 0");
 
                 opcao = Console.readInt();
 
@@ -155,6 +169,7 @@ public class Main {
                 System.out.println("+-------------------------------+");
                 System.out.println("Cancelado! Faça outro pedido");
             }
+            
         }while(opcao !=1);
         System.out.println("Pedido sendo preparado!");
     }

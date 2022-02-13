@@ -296,7 +296,7 @@ public class Interface extends javax.swing.JFrame {
                 tamanho = "PEQUENO(300ML)";
             }
             else if(jRBm.isSelected()){
-                tamanho = "MÃ‰DIO(500ML)";
+                tamanho = "MÉDIO(500ML)";
             }
             else if(jRBg.isSelected()){
                 tamanho = "GRANDE(700ML)";
